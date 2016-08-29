@@ -1,12 +1,14 @@
 package ar.fiuba.tdd.template;
-
+/*
+    Autor : 87525
+ */
 public class Queue<T> implements IQueue<T> {
     private Node<T> first;
     private int quantity;
 
     public Queue() {
         quantity = 0;
-        first = null;
+        first = new Node<>();
     }
 
     public int size() {
@@ -23,13 +25,20 @@ public class Queue<T> implements IQueue<T> {
     }
 
     public void remove() throws AssertionError {
-        first = first.getNext();
-
+        try {
+            first = first.getNext();
+        } catch (Exception e) {
+            throw new AssertionError();
+        }
     }
 
     public T top() throws AssertionError {
-        T object = first.getObject();
-        remove();
-        return object;
+        try {
+            T object = first.getObject();
+            remove();
+            return object;
+        } catch (Exception e) {
+            throw new AssertionError();
+        }
     }
 }

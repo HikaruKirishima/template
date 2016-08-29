@@ -1,8 +1,15 @@
 package ar.fiuba.tdd.template;
-
+/*
+    Autor : 87525
+ */
 public class Node<T> {
     private Node<T> next;
     private T object;
+
+    public Node() {
+        next = null;
+        object = null;
+    }
 
     public Node(T elem) {
         next = null;

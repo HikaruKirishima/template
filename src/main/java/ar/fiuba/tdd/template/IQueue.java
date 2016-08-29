@@ -1,5 +1,7 @@
 package ar.fiuba.tdd.template;
-
+/*
+    Autor : 87525
+ */
 public interface IQueue<T> {
     boolean isEmpty();
 
