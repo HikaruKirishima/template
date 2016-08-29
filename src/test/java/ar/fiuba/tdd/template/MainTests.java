@@ -22,6 +22,16 @@ public class MainTests {
         assertEquals(list.top(), "Primer Elemento");
     }
 
+    @Test
+    public void testSecondFirst() {
+        Queue<String> list = new Queue<>();
+        list.add("Primero");
+        list.add("Segundo");
+        list.add("Tercero");
+        String primero = list.top();
+        assertEquals(list.top(), "Segundo");
+    }
+
     @Test(expected = AssertionError.class)
     public void testTopExceptions() throws AssertionError {
         Queue<String> list = new Queue<>();

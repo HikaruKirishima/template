@@ -27,6 +27,7 @@ public class Queue<T> implements IQueue<T> {
     public void remove() throws AssertionError {
         try {
             first = first.getNext();
+            quantity--;
         } catch (Exception e) {
             throw new AssertionError();
         }
