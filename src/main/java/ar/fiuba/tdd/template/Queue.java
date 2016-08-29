@@ -33,11 +33,11 @@ public class Queue<T> implements IQueue<T> {
     }
 
     public T top() throws AssertionError {
-        try {
-            T object = first.getObject();
+        T object = first.getObject();
+        if ( object != null ) {
             remove();
             return object;
-        } catch (Exception e) {
+        } else {
             throw new AssertionError();
         }
     }

@@ -22,10 +22,9 @@ public class MainTests {
         assertEquals(list.top(), "Primer Elemento");
     }
 
-    /*
     @Test(expected = AssertionError.class)
-    public String testGetFirst() throws AssertionError {
+    public void testTopExceptions() throws AssertionError {
         Queue<String> list = new Queue<>();
-        return (list.top());
-    }*/
+        String value = list.top();
+    }
 }
