@@ -1,6 +1,6 @@
 package ar.fiuba.tdd.template;
 /*
-    Autor : 87525
+    Autor : Elizabeth Solis 87525
  */
 public class Queue<T> implements IQueue<T> {
     List<T> list;

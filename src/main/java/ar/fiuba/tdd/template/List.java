@@ -1,5 +1,7 @@
 package ar.fiuba.tdd.template;
-
+/*
+    Autor : Elizabeth Solis 87525
+ */
 public class List<T> {
     private Node<T> first;
     private int quantity;

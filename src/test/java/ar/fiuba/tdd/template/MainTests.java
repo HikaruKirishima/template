@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 /*
-    Autor : 87525
+    Autor : Elizabeth Solis 87525
  */
 public class MainTests {
 
