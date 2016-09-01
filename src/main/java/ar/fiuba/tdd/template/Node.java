@@ -12,7 +12,7 @@ public class Node<T> {
     }
 
     public Node(T elem) {
-        next = null;
+        next   = null;
         object = elem;
     }
 
