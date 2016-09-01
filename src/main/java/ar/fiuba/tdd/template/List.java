@@ -28,10 +28,10 @@ public class List<T> {
     }
 
     public T getFirst() throws AssertionError {
-        decreaseQuantity();
-        T object = first.getObject();
-        first = first.getNext();
-        return object;
+        if (isEmpty()) {
+            throw new AssertionError() ;
+        }
+        return first.getObject();
     }
 
     private void decreaseQuantity() throws AssertionError {

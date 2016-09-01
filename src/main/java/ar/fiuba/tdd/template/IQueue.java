@@ -7,7 +7,7 @@ public interface IQueue<T> {
 
     int size();
 
-    void add(T item) throws AssertionError ; //Agregar un item
+    void add(T item) ; //Agregar un item
 
     void remove() throws AssertionError;//remover el primer item, lanzar exception si esta vacio
 

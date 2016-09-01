@@ -25,6 +25,7 @@ public class MainTests {
         queue.add("Segundo");
         queue.add("Tercero");
         String primero = queue.top();
+        queue.remove();
         assertEquals(queue.top(), "Segundo");
     }
 
@@ -37,8 +38,30 @@ public class MainTests {
         queue.add("4");
         queue.add("5");
         queue.add("6");
-        queue.remove();
+        queue.remove();//Primero en la cola 1 - se va
         assertEquals(queue.size(),5);
+        queue.remove();//Primero en la cola 2 - se va
+        assertEquals(queue.size(),4);
+        assertEquals(queue.top(),"3"); // el siguiente es el 3
+    }
+
+    @Test
+    public void testGetNext() {
+        Queue<String> queue = new Queue<>();
+        queue.add("Persona1");
+        queue.add("Persona2");
+        queue.add("Persona3");
+        queue.add("Persona4");
+        queue.add("Persona5");
+        queue.add("Persona6");
+        queue.remove();//Persona1 en la cola - se va
+        queue.remove();//Persona2 en la cola - se va
+        assertEquals(queue.top(),"Persona3"); // el siguiente es el 3
+        queue.remove();//Persona3 en la cola - se va
+        queue.remove();//Persona4 en la cola - se va
+        queue.remove();//Persona5 en la cola - se va
+        assertEquals(queue.top(),"Persona6"); // el siguiente es el 6
+        assertEquals(queue.size(),1);
     }
 
     @Test
@@ -75,6 +98,7 @@ public class MainTests {
         Queue<String> queue = new Queue<>();
         queue.add("Primero");
         assertEquals(queue.top(), "Primero");
+        queue.remove();
         queue.remove(); //ERROR!
     }
 
@@ -85,7 +109,7 @@ public class MainTests {
         assertEquals(queue.top(), "Primero");
         queue.add("Segundo");
         assertEquals(queue.top(), "Segundo");
-
+        queue.remove();
         queue.remove(); //ERROR!
     }
 }
